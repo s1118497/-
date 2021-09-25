@@ -1,0 +1,91 @@
+body{background-color: #ebcdb0;} /* 注意因為body(~1000px) 和#container (960px)的width不同 
+										所以設定body的background-color先可以整個網頁填滿色*/
+p{line-height: 1.5;}
+h2{text-decoration:underline}
+
+/* 用class分類因為這些元素會在同一頁面重複出現 */
+img.index {
+    padding: 10px;
+    float: right;
+}
+img.photo{    /*在"photo.html"中的圖片*/
+	padding: 7px;
+	margin:3px;
+	background: #ebcdb0;
+	width: 120px; height:120px;
+    float: left;
+}
+/*----------------------------------------------------------------------------------*/
+#container{
+     width: 960px;
+}
+
+#header{		/* header剛好填滿了#container的闊度，所以無需作浮動排列 */
+    margin:10px 5px;
+    padding:5px 30px;
+    width:890px;      /*960-(5x2)-(30x2)*/
+    height: 180px;      /*因為有backgroud image所以設高度提供足夠空間完整顯示背景圖像*/
+    background-image: url("image/banner.jpg");
+	/* 注意 background-image的顯示範圍包括[width + padding + border(如有)] i.e.只不顯示在margin */
+}
+#header h1 {color: rgb(197, 56, 126); line-height: 18px; text-align: center;}
+#header h2 {color: rgb(197, 56, 126); line-height: 10px; margin-left: 8cm;}
+#header h4 {color: rgb(197, 56, 126); line-height: 8px; margin-left: 10cm;}
+
+
+#sidebar{		/* 設定#sidebar向左浮動排列 */
+    width: 200px;
+    float: left;    
+}
+#menu{
+    margin:5px;
+	width: 189px; /*200 -(1px)*/
+    background: #e6c19c;
+}
+#menu ul{
+    margin:0px;
+    padding: 0px;
+    list-style-type: none;
+}
+#menu ul li a{
+    display: block;
+    padding:5px 10px;
+    text-decoration: none;
+    color: rgb(24, 76, 173);
+    border-right: 1px solid #cfae8c;
+    border-top: 2px solid #ffd6ad;
+}
+#menu li a:hover{background-color: #cc7a29;}
+
+#ad{
+	margin:5px;
+    border-right: 1px solid #cfae8c;
+    border-top: 2px solid #cfae8c;
+    width: 189px;
+	/* 總闊度: 200 - 5x2 - 1px =189px*/
+    height: 189px;
+    /*訂立一個正方形範圍給廣告圖片img擺放*/
+}
+
+#content{		/* 設定#content向右排列 */     /* 事實上全部區塊"float:left"都做到相同的效果，參考例子「www1」內的"menu_vertical.html" */
+	margin:5px;
+    padding: 20px;
+	border-right: 1px solid #cfae8c;
+    border-top: 2px solid #cfae8c;
+    width: 709px;   /*960 - 200 - (5x2) - (20x2) - 1*/
+    float: right;   
+    background: #e6c19c;
+}
+
+#footer{
+    border-right: 1px solid #cfae8c;
+    border-top: 2px solid #cfae8c;
+    margin: 5px;
+    padding: 5px;
+    width: 939px;   /*960-(5x2)-(5x2)-1*/ 
+    clear:both;     /*因為之前有float排列，要clear先可以隔行*/ 
+	background: #e6c19c;
+	font-size:0.5em;
+	color:white;
+    text-align: right;
+}
