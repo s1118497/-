@@ -1,0 +1,53 @@
+#container{
+	width: 980px;
+}
+
+#header{
+	margin: 5px;	/* 外邊距的闊度＝區塊之間的距離，一般情況下是透明的，而且有上下margin合併的特性（採用較大margin數值者)，之後的區塊都統一margin網頁較一致*/
+	padding: 5px;	/*內容框與外邊框的距離，即是有幾"貼邊"　*/
+	width: 960px; 	/* 因為  (網頁闊度 980px) — (margin 5px) X2 - (padding 5px) X2 = 960px */
+	float: left;	/* 靠左浮動排列，因為width已用盡browser闊度，所以不會移位，只有放大縮小Browser視窗時，才會自動下一行 */ 
+	background-color: black;
+}
+#header  h1{color: white}
+
+#menu{
+	margin: 5px;
+	width: 200px;
+	float: left;
+	background-color: black;
+}
+#menu ul{
+	list-style-type:none;
+	padding:0;
+	margin: 0;
+}
+#menu ul li a {
+	display: block;
+	text-decoration: none;
+	color: yellow;
+	padding: 10px 20px;
+	border: 2px solid white;
+	text-align: center;
+}
+#menu ul li a:hover{color:red}
+
+#content{
+	width: 760px;	
+	margin: 5px;
+	float: left;
+	background-color: black;
+	color: white;
+}
+
+#footer{
+	float: left;
+	background-color:black;
+	margin: 5px;
+	padding: 5px;
+	width: 960px; 	 /* 980-5x2-5x2 */ 
+	color: white;
+	text-align: center;
+	font-size: 0.5em;
+	color: white;
+}

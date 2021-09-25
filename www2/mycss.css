@@ -1,0 +1,50 @@
+#container{
+	width: 100%;
+}
+/*橫式menu不用float排列，因為想下一區塊隔行，除了橫式 menu 內的選項 #menu ul li a*/
+
+#header{
+	margin: 1px 20px 5px;	/* 外邊距的闊度＝區塊之間的距離，一般情況下是透明的，而且有上下margin合併的特性（採用較大margin數值者)，之後的區塊都統一margin網頁較一致*/
+	padding: 20px;	/*內容框與外邊框的距離，即是有幾"貼邊"　*/
+	width: 95%; 	
+	background-color: black;
+}
+#header  h1{color: white}
+
+#menu{
+	margin-bottom: 5px;
+	width: 100%;
+	background-color: black;
+	overflow: auto;		/*如不用overflow，在#menu li a {background-color: black} 做到相同效果? */
+}
+#menu ul{
+	list-style-type:none;
+	padding:0;
+	margin: 0;
+}
+#menu li a {
+	display: block;
+	float: left;
+	text-decoration: none;
+	color: yellow;
+	padding: 10px 150px;
+	border-right: 2px solid white;
+}
+#menu li a:hover{color:green}
+
+#content{
+	width: 100%;	
+	margin: 5px;
+	background-color: black;
+	color: white;
+}
+
+#footer{
+	background-color:black;
+	margin: 5px;
+	padding: 5px;
+	width: 100%; 	
+	color: lightblue;
+	text-align: center;
+	font-size: 0.5em;
+}
